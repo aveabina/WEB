@@ -1,0 +1,45 @@
+<html>
+<head>
+</head>
+<body>
+	<meta charset="utf-8">
+	<script>
+		//1 лаб
+		alert('Hello world!');
+		//2 лаб
+
+		//1
+		var numb = prompt('Введите ваше число: ');
+		alert('Ваше число: ' + Number(numb));
+		//2
+		var c1 = prompt('Введите число 1:');
+		var op = prompt('Введите операцию:');
+		var c2 = prompt('Введите число 2:');
+		c1 = parseInt(c1);
+		c2 = parseInt(c2);
+		if (op === '*') {
+			res = c1 * c2;
+		} else if (op === '/') {
+			res = c1 / c2
+		} else if (op === '+') {
+			res = c1 + c2
+		} else if (op === '-') {
+			res = c1 - c2
+		}
+		alert('Результат: ' + Number(res));
+
+		//3
+		guess = prompt('Загадайте число, умножьте его на 2, прибавьте 7, введите получившееся число:');
+		guess = parseInt(guess);
+		res = (guess - 7) / 2;
+		alert('Первоначальное число: ' + Number(res));
+
+		//4
+		name = prompt('Введите ваше имя: ');
+		year = prompt('Введите год рождения: ');
+		year = parseInt(year);
+		age = 2021 - year;
+		document.write(name + ':' + Number(age));
+	</script>
+</body>
+</html>
