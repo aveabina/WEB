@@ -1,0 +1,71 @@
+<html>
+<body>
+	<meta charset="utf-8">
+	<script>
+		//1
+		var ans = 0;
+		var ques1 = prompt('Как называется наша планета?');
+		var ques2 = prompt('Как называется спутник Земли?');
+		if (ques1 == 'Земля') {
+			ans = ans + 1;
+		} 
+		if (ques2 == 'Луна') {
+			ans = ans + 1;
+		}
+		alert('Правильных ответов:' + Number(ans));
+
+
+		//2
+		for ( var i = 1; i <= 10; i++) {
+			alert(i)
+		}
+		
+
+		//3
+		i = 0;
+		while (i != 1) {
+			var i = prompt('Еще по одной?')
+		}
+
+		//4
+		var f = prompt('Введите число:')
+		var n = 1;
+		for (var i = 1; i <= f; i++) {
+			n = n * i;
+		}
+		alert('Факториал : ' + Number(n));
+
+		//5
+		var surname = prompt('Введите свою фамилию: ');
+		var len = surname.length
+		var c = 0;
+		for (var i = 0; i <= len; i++) {
+			if (surname[i] == surname[len - i]) {
+				c = c + 1;
+			}
+		}
+		if (c == len) {
+			alert('Это палендром!')
+		} else {
+			alert('Это не палендром!')
+		}
+
+
+		//6
+		var n = prompt('Введите число: ');
+		for (var i = 1; i <= n; i ++) {
+			var c = 0;
+			for (var j = 1; j <= i; j++) {
+				if (i % j == 0) {
+				c += 1;
+				}
+			}
+			if (c == 2) {
+				alert('Простое число: ' + Number(i))
+			}
+
+		}
+
+	</script>
+</body>
+</html>
