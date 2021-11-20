@@ -1,5 +1,5 @@
 # WEB
 
-1 - сем. 18.11
+1.html - сем. 18.11 (prompt, alert, parseInt)
 
-2 - сем. 20.11 if, for, while
+2.html - сем. 20.11 (if, for, while)
