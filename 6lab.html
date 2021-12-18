@@ -1,0 +1,127 @@
+<html>
+<body>
+	<script>
+		//1  Калькулятор
+		let operation = prompt("Введите операцию");
+		let num1 = Number(operation[0]);
+		let op = operation[1];
+		let num2 = Number(operation[2]);
+
+		let calc = (num1, op, num2) => {
+			if (op == "+") {
+				return num1+num2;
+			};
+			if (op == "-") {
+				return num1-num2;
+			};
+			if (op == "*") {
+				return num1*num2;
+			};
+			if (op == "/") {
+				return num1/num2;
+			};		
+		};	
+
+		alert(calc(num1,op,num2));
+
+		//2 Проверка через Function Expression
+		let test = prompt("Какой сейчас год?");
+
+		let isright = (test==2021) ?
+			() => "Верно!":
+			() => "Неверно";
+		alert(isright(test));
+
+
+		//3 Полиндром
+
+		let lastname = prompt('Введите свою фамилию: ');
+		let len = lastname.length;
+
+		let ispalindrom = (lastname, len) => {
+			let c = 0;
+			let yes = "Это палиндром!";
+			let no = "Это не палиндром!";
+			
+			for (let i = 0; i <= len-1; i++) {
+				if (lastname[i] == lastname[len-1 - i]) {
+					c = c + 1;
+				};
+			};
+
+			if (c == len) {
+				return yes;
+			} else {
+				return no;
+			};
+
+		}
+		alert(ispalindrom(lastname, len));
+
+		//4 Среднее значение
+		let array = [5,2,3,5];
+		let arlen = array.length;
+		let sum = 0;
+		for (let n=0; n<=arlen-1; n++) {
+			sum += array[n];
+		};
+
+		let average = (sum, arlen) => "Среднее: " + (sum/arlen);
+		alert(average(sum,arlen));
+
+		//5 Количество дней до Нового Года
+		let now = new Date();
+		let newyear = new Date(2022,0,1);
+		day_in_msec = 1000*60*60*24;
+
+		let days = (now,newyear) => "До Нового года: " + Math.floor((newyear-now)/day_in_msec);
+		alert(days(now,newyear));
+
+		//6 Вывод undefined
+		let empty = () => {};
+		alert(empty());
+
+		//7 Функции для массива: Суммирование, выявление четных элементов, умножение элементов на 2
+		let arr = [5,2,3,5,4,6];
+
+		let arsum = (arr) => {
+			let summ = 0;
+			let lenn = arr.length;
+			for (let j=0; j<=lenn-1; j++) {
+				summ += arr[j];
+				};
+			return "Сумма: "+summ;
+			}
+			
+		let archet = (arr) => {
+			let lenn = arr.length;
+			let chetarr = [];
+			for (let i=0; i<=lenn-1; i++) {
+				if ((arr[i] % 2) == 0) {
+					chetarr.push(arr[i]);
+					};
+			};
+			return "Четные:"+chetarr;	
+		};
+
+		let arx2 = (arr) => {
+			let lenn = arr.length;
+			let arr2 = [];
+			for (let i=0; i<=lenn-1; i++) {
+				arr2.push(arr[i]*2);
+			}
+			return "Массив х2:"+arr2;
+		};
+
+		alert(arsum(arr));
+		alert(archet(arr));
+		alert(arx2(arr));
+
+		//8 Фильтр emails
+		mails = ["baina@mail.ru", "alex2@gmail.com", "lina@mail.ru"]
+		let filter = (mails) => "Отфильтрованно:"+mails.sort();
+		alert(filter(mails));
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<body>
+<script>
+
+	//1   Создание объекта, добавление свойств и метода
+	let user = {
+		name: "Джон",
+		age: 30
+		};
+	user.sayHi = function() {
+		alert("Привет!");
+	};
+	user.sayHi();
+
+	//2 Вывод 3х строк из свойств объекта
+	let customer_inf = {
+		name: "Baina",
+		lastname: "Badmaeva",
+		patronym: "Batrovna",
+		age: 19,
+		city: "Moscow",
+		show() {
+		alert(this.lastname+" "+this.name+" "+this.patronym);
+		}
+	};
+	customer_inf.show();
+
+	//3 Вывод информации с помощью метода showinf() по заданному объекту
+	let users = {
+		us1: "Baina",
+		us2: "Alena",
+		us3: "Tanya",
+		showinf() {
+			alert("Users: "+this.us1+" "+this.us2+" "+this.us3);
+		}
+	};
+
+	let orders = {
+		ord1: "Pizza",
+		ord2: "Pasta",
+		ord3: "Coffee",
+		showinf() {
+			alert("Orders: "+this.ord1+" "+this.ord2+" "+this.ord3);
+		}
+	};
+
+	let rests = {
+		rest1: "Pizzahut",
+		rest2: "Patio",
+		rest3: "Starbucks",
+		showinf() {
+			alert("Restaraunts: "+this.rest1+" "+this.rest2+" "+this.rest3);
+		}
+	};
+	rests.showinf();
+	orders.showinf();
+	users.showinf();
+	
+	//4  Вывод массива - имен группы
+	let grouplist = [];
+
+	function Stud(name) {
+	this.name = name;
+	grouplist.push(this.name)
+	}
+	let stud1 = new Stud("Baina");
+	let stud2 = new Stud("Ivan");
+	let stud3 = new Stud("Anna");
+	let stud4 = new Stud("Alexander");
+	let stud5 = new Stud("Mariya");
+
+	alert(grouplist);
+
+	//5  Передача параметров конструктору
+
+	function Student(name, course, group, faculty) {
+		info = []
+		this.name = name;
+		this.course = course;
+		this.group = group;
+		this.faculty = faculty;
+		info.push(this.name+" "+this.course+" "+this.group+" "+this.faculty);
+		alert(info);
+	}
+	let stud = new Student("Бадмаева Баина",2,"ПИ20-6","ИТиАБД");
+
+</script>
+</body>
+</html>
